@@ -6,4 +6,5 @@
 
 **/
 
+export * from "@components/Accordion/data/accordionData";
 export * from "@components/Accordion/Accordion";

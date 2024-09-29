@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const SEO = ({ title, description, keywords }) => {
-    // Cuztomize Meta Properties
+    // Customize Meta Properties
     // Can create extra props and pass as arguments like title in case you want to change for each page.
     const metaDescription = description
         ? description

@@ -1,39 +1,7 @@
 import { SectionContainer } from "@components/Section";
 import { Icon } from "@iconify/react";
-import { useState } from "react";
-import { v4 as uuid } from "uuid";
+import { useState, useEffect } from "react";
 import clsx from "clsx";
-
-const accordionData = [
-    {
-        id: uuid(),
-        title: "What is Notion?",
-        isOpen: true,
-        content:
-            "Notion is an all-in-one productivity tool that allows you to create notes, databases, and collaborative workspaces, making it easy to organize and manage your tasks, projects, and ideas in one place."
-    },
-    {
-        id: uuid(),
-        title: "Who is this template for?",
-        isOpen: false,
-        content:
-            "This template is made for people who want to make a website quickly with a Notion-themed style and prefer to use a template."
-    },
-    {
-        id: uuid(),
-        title: "Do I need to pay for this?",
-        isOpen: false,
-        content:
-            "No, this is free. All content on this template are dummy data."
-    },
-    {
-        id: uuid(),
-        title: "Where can I ask more questions about this template?",
-        isOpen: false,
-        content:
-            "If you have any further questions or need assistance regarding this template, please feel free to reach out to me on my website, or click the Contact within the navigation links."
-    }
-];
 
 const accordionItemType = {
     top: "rounded-t-lg",
@@ -41,8 +9,18 @@ const accordionItemType = {
     bottom: "border border-t-0 rounded-b-lg"
 };
 
-export const Accordion = () => {
+export const Accordion = ({ accordionData = [] }) => {
     const [activeAccordion, setActiveAccordion] = useState(null);
+    const [clientAccordionData, setClientAccordionData] = useState([]);
+
+    // Generate the IDs after the component mounts to avoid SSR mismatch
+    useEffect(() => {
+        const updatedAccordionData = accordionData.map((item) => ({
+            ...item,
+            clientId: item.id || uuid() // Add a client-specific ID if not present
+        }));
+        setClientAccordionData(updatedAccordionData);
+    }, [accordionData]);
 
     const accordionClickHandle = (id) => {
         setActiveAccordion(id === activeAccordion ? null : id);
@@ -50,7 +28,7 @@ export const Accordion = () => {
 
     return (
         <SectionContainer className="accordion--container my-16 drop-shadow-xl max-w-3xl mx-auto offset-y-0 offset-x-8">
-            {accordionData.map((accordionItem, index) => (
+            {clientAccordionData.map((accordionItem, index) => (
                 <div
                     key={accordionItem.id}
                     id={accordionItem.id}
@@ -70,9 +48,13 @@ export const Accordion = () => {
                             className="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
                             type="button"
                             aria-expanded={accordionItem.isOpen}
-                            onClick={() =>
-                                accordionClickHandle(accordionItem.id)
-                            }
+                            onClick={() => {
+                                console.log(
+                                    "Button clicked: ",
+                                    accordionItem.clientId
+                                );
+                                accordionClickHandle(accordionItem.clientId);
+                            }}
                         >
                             {accordionItem.title}
                             <Icon
@@ -91,7 +73,17 @@ export const Accordion = () => {
                             }
                         )}
                     >
-                        <p>{accordionItem.content}</p>
+                        {accordionItem.contentType === "list" ? (
+                            <ul className="list-disc">
+                                {accordionItem.content.map(
+                                    (listItem, index) => (
+                                        <li key={index}>{listItem.label}</li>
+                                    )
+                                )}
+                            </ul>
+                        ) : (
+                            <p>{accordionItem.content}</p>
+                        )}
                     </div>
                 </div>
             ))}

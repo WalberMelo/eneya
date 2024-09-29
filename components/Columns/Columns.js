@@ -5,31 +5,31 @@ import { v4 as uuid } from "uuid";
 const ColumnData = [
     {
         id: uuid(),
-        title: "Emily J.",
+        title: "María González",
         icon: "carbon:user-avatar-filled-alt",
         content:
-            "NutriPlan has revolutionized my meal planning and nutrition journey. With its intuitive Notion template, I can effortlessly plan my meals, track my nutrition, and stay on top of my health goals. It's truly a game-changer!"
+            "El césped artificial que instalaron en mi jardín es simplemente increíble. La calidad es excepcional y ahora no tengo que preocuparme por el riego o el mantenimiento constante. ¡Recomendaría sus servicios a cualquiera!"
     },
     {
         id: uuid(),
-        title: "Jason F.",
+        title: "Carlos Martínez",
         icon: "carbon:user-avatar-filled-alt",
         content:
-            "I've tried various meal planning tools, but NutriPlan stands out from the rest. The customizable layouts and seamless recipe integration make it a breeze to create delicious and healthy meals. It's become an essential part of my wellness routine."
+            "Contratamos a Eneya para renovar la zona de prácticas de nuestro club de Golf, y el resultado fue mejor de lo esperado. El equipo fue muy profesional y el césped es de la mejor calidad. Sin duda, volveremos a trabajar con ellos en el futuro."
     },
     {
         id: uuid(),
-        title: "Miguel J.",
+        title: "Fernando Herrera",
         icon: "carbon:user-avatar-filled-alt",
         content:
-            "NutriPlan has made meal planning and tracking nutrition so much easier and enjoyable. The comprehensive features and user-friendly interface have helped me stay on track with my health goals. I highly recommend it to anyone looking for a convenient and effective solution."
+            "Renovamos las instalaciones de la zona común de nuestra casa y no podríamos estar más contentos. El espacio ahora es mucho más luminoso, moderno y funcional para recibir a nuestras visitas."
     },
     {
         id: uuid(),
-        title: "Kim L.",
+        title: "Ana Rodríguez",
         icon: "carbon:user-avatar-filled-alt",
         content:
-            "I can't imagine my nutrition journey without NutriPlan. It has simplified the way I plan my meals and track my progress. The ability to customize layouts and easily integrate recipes has made healthy eating a breeze. It's been a true lifesaver!"
+            "La renovación del baño superó mis expectativas. El equipo fue muy profesional y cada detalle fue perfectamente ejecutado. Ahora tengo un baño moderno y funcional que parece sacado de una revista. ¡Estoy muy satisfecha con el resultado!"
     }
 ];
 

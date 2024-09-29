@@ -6,19 +6,19 @@ import { v4 as uuid } from "uuid";
 const ContentImageData = [
     {
         id: uuid(),
-        title: "Effortless Planning",
+        title: "Colocación de suelos laminados y vinílicos",
         content:
-            "Say goodbye to meal planning stress! With NutriTrack, planning your meals becomes a breeze. Our user-friendly Notion template lets you create customized daily or weekly meal plans effortlessly. Enjoy a balanced and nutritious diet without the hassle.",
+            "Nos encargamos de la colocación de suelos laminados y pisos vinílicos, ideales para mejorar cualquier tipo de espacio, ya sea en viviendas, oficinas o locales comerciales. En la imagen se puede ver uno de nuestros proyectos en un salón residencial, donde se logró una apariencia elegante y moderna. Esta opción es perfecta para quienes buscan renovar sus ambientes con un acabado impecable y duradero.",
         align: "right",
-        image: "/features1.png"
+        image: "/servicios1.png"
     },
     {
         id: uuid(),
-        title: "Shopping List",
+        title: "Instalación de césped artificial",
         content:
-            "We've got your grocery shopping covered! NutriTrack includes a handy shopping list feature. As you plan your meals, the template automatically generates a comprehensive shopping list. No more forgotten items or aimless wandering in the supermarket. Shopping for healthy ingredients has never been easier!",
+            "Nos especializamos en la instalación de césped artificial para diversas aplicaciones, como áreas deportivas, jardines, y espacios recreativos. La imagen muestra una de nuestras recientes instalaciones en una zona de práctica deportiva. Nuestro césped artificial no solo mejora la estética del entorno, sino que también reduce los costos de mantenimiento y asegura un rendimiento óptimo bajo cualquier condición climática.",
         align: "left",
-        image: "/features2.png"
+        image: "/servicios2.png"
     }
 ];
 
@@ -40,7 +40,7 @@ export const ContentImage = () => {
                             src={item.image}
                             width={512}
                             height={512}
-                            objectFit="cover"
+                            style={{ objectFit: "cover" }}
                             alt="Process Banner 1"
                             className="drop-shadow-xl w-full offset-y-0 offset-x-8 blur-16"
                         />

@@ -6,9 +6,12 @@ import { HomeBanner } from "@components/Banner";
 import { Columns } from "@components/Columns";
 import { ContentImage } from "@components/ContentImage";
 import { Content } from "@components/Content";
-import { Accordion } from "@components/Accordion";
+import { Accordion, accordionHomeData } from "@components/Accordion";
 import { MotionBTTContainer } from "@components/Motion";
+import { Form } from "@components/Form";
 import SEO from "@components/SEO/SEO";
+import ReactCompareImage from "react-compare-image";
+
 import {
     CardBody,
     CardGroup,
@@ -16,13 +19,15 @@ import {
     CardImage,
     Card
 } from "@components/Card";
+import { SavingsCalculator } from "@components/Features/SavingsCalculator";
 
 export default function Home() {
     return (
         <Layout className="">
             <SEO
-                title="NutriTrack - A landing page template 🚀"
-                description="Discover NutriTrack, the effortless way to plan your meals with the power of Notion. Streamline your nutrition journey and achieve your health goals with ease."
+                title="Eneya - Instalaciones y Reformas"
+                description="Eneya Instalaciones ofrece soluciones integrales en césped artificial, pisos vinílicos y reformas. Con más de 20 años de experiencia, destacamos por proyectos personalizados y cumplimiento en los plazos de entrega."
+                keywords="césped artificial, reformas, pisos vinílicos, albañilería, electricidad, fontanería, instalación de moquetas, pladur, mantenimiento"
             />
             <div className="main-wrapper bg-[#F3F5F8] relative z-10 pb-20 pt-20 ">
                 {/* { Page Banner } */}
@@ -34,99 +39,128 @@ export default function Home() {
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
                         <SectionContainer id="features" className="features">
-                            <BadgeGroup alignment="center">
-                                <BadgeMessage>Features</BadgeMessage>
-                            </BadgeGroup>
                             <PageTitle
                                 className="text-center mx-auto"
                                 type="default"
                             >
-                                Simplify Your Nutrition Journey with NutriTrack
+                                Atendemos tus requerimientos con la mayor
+                                dedicación.
                             </PageTitle>
                             <Content className="text-center" alignment="center">
                                 <p>
-                                    Hey there! Welcome to NutriTrack, the
-                                    ultimate nutrition meal planner powered by
-                                    Notion. We&apos;ve got some awesome features
-                                    lined up to make your nutrition journey a
-                                    piece of cake (pun intended). Check them
-                                    out:
+                                    Confía en nuestra experiencia para
+                                    transformar tu hogar. Todos nuestros
+                                    trabajos están respaldados por una garantía
+                                    de calidad, y nos comprometemos a ofrecerte
+                                    un servicio profesional y confiable. Tu
+                                    satisfacción es nuestra mayor recompensa.
                                 </p>
                             </Content>
                             <ContentImage />
                         </SectionContainer>
                     </MotionBTTContainer>
+
                     {/* Card Container Tabs */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
                         <SectionContainer className="feature-tabs">
                             <BadgeGroup alignment="center">
-                                <BadgeMessage>More Features</BadgeMessage>
-                                <BadgeIcon icon="twemoji:waving-hand" />
+                                <BadgeMessage>Proyectos</BadgeMessage>
+                                <BadgeIcon icon="fluent-mdl2:work-item" />
                             </BadgeGroup>
                             <PageTitle
                                 className="text-center mx-auto"
                                 type="default"
                             >
-                                Master Your Meal Planning and Nutrition Journey
+                                Renovación de Espacios
                             </PageTitle>
-                            <Content className="text-center" alignment="center">
+                            <Content
+                                className="text-center mb-4"
+                                alignment="center"
+                            >
                                 <p>
-                                    Our comprehensive Notion template designed
-                                    to empower you on your meal planning and
-                                    nutrition journey. With our user-friendly
-                                    features, customizable layouts, and seamless
-                                    recipe integration, taking control of your
-                                    meals has never been easier.
+                                    Damos nueva vida a todo tipo de espacios,
+                                    transformándolos en ambientes modernos,
+                                    funcionales y visualmente atractivos. Nos
+                                    especializamos en reformas integrales,
+                                    abarcando desde baños hasta cocinas, salones
+                                    y áreas exteriores, siempre asegurándonos de
+                                    cuidar cada detalle para cumplir con las
+                                    expectativas de nuestros clientes.
                                 </p>
                             </Content>
-                            <CardGroup className="grid scroll-m-24 gap-8 grid-cols-1 max-w-4xl mx-auto mt-24 md:grid-cols-2">
+                            <div
+                                style={{
+                                    width: "60%",
+                                    height: "100%",
+                                    overflow: "hidden",
+                                    position: "relative",
+                                    margin: "0 auto"
+                                }}
+                            >
+                                <ReactCompareImage
+                                    leftImage="comparison1.png"
+                                    rightImage="comparison2.png"
+                                    aspectRatio="wider"
+                                    sliderLineColor="yellow"
+                                    hover="true"
+                                />
+                            </div>
+
+                            <Content
+                                className="text-center mt-8 text-black-400"
+                                alignment="center"
+                            >
+                                <h3 className="mb-6 md:h3 font-semibold text-black">
+                                    Servicios montaje e mantenimiento
+                                </h3>
+                            </Content>
+
+                            <CardGroup className="grid scroll-m-24 gap-8 grid-cols-1 max-w-4xl mx-auto mt-18 md:grid-cols-2">
                                 <Card className="col-span-1 text-primary-900">
                                     <CardBody className="w-full bg-white-600/20 p-12">
                                         <CardImage
-                                            src="/features4.png"
+                                            src="/servicios3.png"
                                             alt="Customizable Layouts image used."
                                         />
                                         <CardHeader className="!text-black !text-2xl !font-bold">
-                                            Customizable Layouts
+                                            Montaje de Pladur
                                         </CardHeader>
                                         <p>
-                                            Personalize your meal planning
-                                            experience with our flexible
-                                            layouts. Tailor your sections,
-                                            categories, and tabs to suit your
-                                            unique style and organization
-                                            preferences. Our template adapts to
-                                            your needs, providing a seamless and
-                                            personalized planning experience.
+                                            Ofrecemos soluciones eficientes para
+                                            el montaje de Pladur. Nuestro equipo
+                                            se asegura de realizar un montaje
+                                            preciso y de alta calidad, adaptado
+                                            a las necesidades específicas de
+                                            cada proyecto.
                                         </p>
                                     </CardBody>
                                 </Card>
                                 <Card className="col-span-1 text-primary-900">
                                     <CardBody className="w-full bg-white-600/20 p-12">
                                         <CardImage
-                                            src="/features3.png"
+                                            src="/servicios5.png"
                                             alt="Progress Tracking image used."
                                         />
                                         <CardHeader className="!text-black !text-2xl !font-bold">
-                                            Progress Tracking
+                                            Electricidad y Fontanería
                                         </CardHeader>
                                         <p>
-                                            Celebrate your wins and stay
-                                            motivated on your nutrition journey.
-                                            NutriTrack allows you to monitor
-                                            your progress with weight,
-                                            measurements, and other key metrics.
-                                            Track your improvements over time
-                                            and see the positive impact of your
-                                            healthy choices.
+                                            Ofrecemos soluciones completas en
+                                            electricidad y fontanería,
+                                            asegurando el correcto
+                                            funcionamiento y seguridad de las
+                                            instalaciones en todo tipo de
+                                            espacios, ya sean residenciales,
+                                            comerciales o industriales
                                         </p>
                                     </CardBody>
                                 </Card>
                             </CardGroup>
                         </SectionContainer>
                     </MotionBTTContainer>
+
                     {/* Testimonials */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
@@ -136,17 +170,18 @@ export default function Home() {
                             className="benefits"
                         >
                             <BadgeGroup alignment="left">
-                                <BadgeMessage>Testimonials</BadgeMessage>
+                                <BadgeMessage>Testimonios</BadgeMessage>
                                 <BadgeIcon icon="twemoji:waving-hand" />
                             </BadgeGroup>
                             <PageTitle className="" type="default">
-                                This is what our customers have to say about
-                                this template
+                                Esto es lo que nuestros clientes tienen que
+                                decir sobre nuestros servicios
                             </PageTitle>
                             <Columns />
                         </SectionContainer>
                     </MotionBTTContainer>
-                    {/* Accordions */}
+
+                    {/* FAQ */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
@@ -158,12 +193,36 @@ export default function Home() {
                                 className="text-center mx-auto"
                                 type="default"
                             >
-                                Got some burning questions about NutriTrack?{" "}
-                                <br></br>
-                                <br></br>No worries! We&apos;ve got the answers
-                                you need:
+                                ¿Tienes algunas preguntas sobre nuestros
+                                servicios? <br></br>
                             </PageTitle>
-                            <Accordion />
+                            <Accordion accordionData={accordionHomeData} />
+                        </SectionContainer>
+                    </MotionBTTContainer>
+
+                    {/* Contacto */}
+                    <MotionBTTContainer
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                    >
+                        <SectionContainer id="contacto">
+                            <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto ">
+                                {/* First Card */}
+                                <Card className="col-span-1 text-primary-900">
+                                    <CardBody className="w-full bg-white-600/20 p-12">
+                                        <CardHeader className="!text-black !text-2xl !font-bold">
+                                            Solicita Presupuesto
+                                        </CardHeader>
+                                        <Form />
+                                    </CardBody>
+                                </Card>
+
+                                {/* Second Card */}
+                                <Card className="col-span-1 text-primary-900">
+                                    <CardBody className="w-full p-8">
+                                        <SavingsCalculator />
+                                    </CardBody>
+                                </Card>
+                            </CardGroup>
                         </SectionContainer>
                     </MotionBTTContainer>
                 </SectionContainer>

@@ -1,8 +1,26 @@
+// @layer components {
+//     #footer {
+//         .footer {
+//             &--background {
+//                 @apply absolute left-0 top-0 right-0 bottom-0 z-[5] h-full bg-center bg-cover bg-no-repeat opacity-50;
+
+//             }
+//         }
+//     }
+// }
 @layer components {
     #footer {
+        z-index: 1;
+        /* Make sure it's above the footer background but below page content */
+        position: relative;
+        /* Ensure the footer stays within the flow of the page */
+
         .footer {
             &--background {
-                @apply absolute left-0 top-0 right-0 bottom-0 z-[5] h-full bg-center bg-cover bg-no-repeat opacity-50;
+                /* Constrain the background only to the footer area */
+                top: auto;
+                /* Remove top 0 to prevent stretching over the entire page */
+                @apply absolute left-0 right-0 bottom-0 z-[-1] h-full bg-center bg-cover bg-no-repeat opacity-50;
             }
         }
     }

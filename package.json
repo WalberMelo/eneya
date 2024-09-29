@@ -1,12 +1,12 @@
 {
-    "name": "nutritrack",
+    "name": "eneya instalaciones",
     "version": "1.1.1",
-    "description": "NutriTrack - A customizable landing page theme built with AstroJS and TailwindCSS, specifically designed for Notion creators.",
+    "description": "Eneya Instalaciones ofrece soluciones integrales en césped artificial, pisos vinílicos y reformas.",
     "main": "index.js",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/christian-luntok/nutritrack.git"
+        "url": "git+https://github.com/WalberMelo/eneya"
     },
     "keywords": [
         "next",
@@ -17,8 +17,8 @@
         "tailwindcss",
         "tailwind"
     ],
-    "author": "chrstnl",
-    "homepage": "https://chrstnl.com/",
+    "author": "walber Melo",
+    "homepage": "https://walbermelo.com/",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -29,7 +29,7 @@
         "@fortawesome/fontawesome-svg-core": "^6.2.1",
         "@fortawesome/free-solid-svg-icons": "^6.2.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
-        "@headlessui/react": "^1.7.14",
+        "@headlessui/react": "^2.1.8",
         "@iconify/react": "^4.0.1",
         "@next/font": "^13.1.2",
         "@vercel/og": "^0.0.21",
@@ -43,10 +43,11 @@
         "numeral": "^2.0.6",
         "openai": "^3.2.1",
         "react": "18.2.0",
+        "react-compare-image": "^3.4.0",
         "react-dom": "18.2.0",
+        "react-hot-toast": "^2.4.0",
         "resize-observer-polyfill": "^1.5.1",
-        "uuid": "^8.3.2",
-        "react-hot-toast": "^2.4.0"
+        "uuid": "^8.3.2"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",

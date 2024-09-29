@@ -9,11 +9,11 @@ const DATA = [
         title: "Template",
         items: [
             {
-                label: "Features",
+                label: "Servicios",
                 href: "#features"
             },
             {
-                label: "Testimonials",
+                label: "Testimonios",
                 href: "#testimonials"
             },
             {
@@ -26,23 +26,18 @@ const DATA = [
         title: "Company",
         items: [
             {
-                label: "About",
-                href: "https://github.com/christian-luntok/",
-                target: "_blank"
-            },
-            {
-                label: "Twitter",
-                href: "https://github.com/christian-luntok/",
+                label: "Quiénes somos",
+                href: "",
                 target: "_blank"
             },
             {
                 label: "Instagram",
-                href: "https://github.com/christian-luntok/",
+                href: "https://www.instagram.com/eneyainstalaciones/",
                 target: "_blank"
             },
             {
                 label: "Facebook",
-                href: "https://github.com/christian-luntok/",
+                href: "",
                 target: "_blank"
             }
         ]
@@ -63,11 +58,11 @@ export const Footer = () => {
                             <div className="footer--logo grid gap-8">
                                 <Link href="/">
                                     <Image
-                                        src="/nutritrack.svg"
+                                        src="/eneya.png"
                                         alt="logo"
-                                        className="h-10 w-auto"
-                                        height="25"
-                                        width="100"
+                                        className="h-20 w-auto"
+                                        height="200"
+                                        width="700"
                                         priority
                                     />
                                 </Link>
@@ -75,10 +70,10 @@ export const Footer = () => {
                                 <ButtonGroup alignment="left">
                                     <a
                                         role="button"
-                                        href="https://github.com/christian-luntok/nutritrack"
+                                        href=""
                                         className="btn btn--secondary"
                                     >
-                                        Get Template
+                                        Solicitar presupuesto
                                         <Icon icon="material-symbols:arrow-forward-rounded" />
                                     </a>
                                 </ButtonGroup>
@@ -127,15 +122,15 @@ export const Footer = () => {
             <SectionContainer className="footer-credits relative z-10">
                 <div className="wrap wrap-px py-6">
                     <p className="my-0">
-                        © {year} Nutritrack. All rights reserved{" - "}
+                        © {year} Eneya. Todos derechos reservados{" - "}
                         <span className="font-normal">
-                            A template by{" "}
+                            Desarrollado por{" "}
                             <Link
                                 className="transition-colors duration-300 hover:underline"
-                                href="https://chrstnl.com"
+                                href="https://www.walbermelo.com/"
                                 target="_blank"
                             >
-                                chrstnl.
+                                W|M
                             </Link>
                         </span>
                     </p>
