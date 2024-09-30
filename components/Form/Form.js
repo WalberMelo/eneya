@@ -2,6 +2,7 @@ import { Field, Input, Label, Textarea } from "@headlessui/react";
 import { useState } from "react";
 import clsx from "clsx";
 import { ButtonGroup } from "@components/Button";
+import Link from "next/link";
 
 export const Form = () => {
     const [name, setName] = useState("");
@@ -122,28 +123,13 @@ export const Form = () => {
                             className="form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out"
                         />
                         <span>
-                            He leído y acepto el{" "}
-                            <a
-                                href="/aviso-legal"
-                                className="text-blue-600 underline"
-                            >
-                                Aviso Legal
-                            </a>
-                            , la{" "}
-                            <a
+                            He leído y acepto la{" "}
+                            <Link
                                 href="/politica-de-privacidad"
                                 className="text-blue-600 underline"
                             >
                                 Política de Privacidad
-                            </a>{" "}
-                            y la{" "}
-                            <a
-                                href="/politica-de-cookies"
-                                className="text-blue-600 underline"
-                            >
-                                Política de Cookies
-                            </a>
-                            .
+                            </Link>{" "}
                         </span>
                     </label>
                 </div>
