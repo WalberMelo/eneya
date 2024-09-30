@@ -42,26 +42,26 @@ export const HomeBanner = () => {
                         </ButtonGroup>
                     </div> */}
                 </MotionBTTContainer>
-                {/* Appear Fourth */}
+                {/* Appear Fourth -  */}
                 <MotionBTTContainer transition={{ delay: 0.8, duration: 0.5 }}>
                     <div className="relative page-banner--image">
                         <Content className="text-left mb-4" alignment="left">
-                            <ul className="absolute bottom-5 left-40 text-green-100 z-10">
-                                <li className="flex items-center mb-3">
+                            <ul className="absolute bottom-5 left-5 sm:left-10 md:left-20 lg:left-40 text-green-100 z-10 text-xs sm:text-sm md:text-base lg:text-2xl leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed tracking-tight sm:tracking-normal md:tracking-wide lg:tracking-wider">
+                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
                                     <Icon
                                         icon="mdi:checkbox-outline"
                                         color="yellow"
                                     />
                                     <span className="ml-2">Reformas</span>
                                 </li>
-                                <li className="flex items-center mb-3">
+                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
                                     <Icon
                                         icon="mdi:checkbox-outline"
                                         color="yellow"
                                     />
                                     <span className="ml-2">Mantenimiento</span>
                                 </li>
-                                <li className="flex items-center mb-3">
+                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
                                     <Icon
                                         icon="mdi:checkbox-outline"
                                         color="yellow"
@@ -70,7 +70,7 @@ export const HomeBanner = () => {
                                         Venta e instalación
                                     </span>
                                 </li>
-                                <li className="flex items-center mb-3">
+                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
                                     <Icon
                                         icon="mdi:checkbox-outline"
                                         color="yellow"
@@ -88,7 +88,7 @@ export const HomeBanner = () => {
                             height={680}
                             alt="Page Banner"
                             style={{ objectFit: "cover" }}
-                            className="mx-auto"
+                            className="mx-auto w-full h-auto lg:w-full"
                             priority
                         />
                     </div>
