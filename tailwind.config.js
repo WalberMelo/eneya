@@ -102,18 +102,32 @@ module.exports = {
                     950: "#595959"
                 },
                 secondary: {
-                    50: "#FFF9F0",
-                    100: "#FFF5E5",
-                    200: "#FFEBCC",
-                    300: "#FFDEAD",
-                    400: "#FFD494",
-                    500: "#FFC56E",
-                    600: "#FFA929",
-                    700: "#EB8D00",
-                    800: "#C77700",
-                    900: "#8A5300",
-                    950: "#663D00"
+                    50: "#F9F5E8", // Very light shade
+                    100: "#F1E7C6", // Light shade
+                    200: "#E3D4A3", // Lighter shade
+                    300: "#D5B680", // Medium light shade
+                    400: "#C2AC82", // Base color
+                    500: "#A58B68", // Medium shade
+                    600: "#8D6B51", // Medium dark shade
+                    700: "#73512B", // Darker shade
+                    800: "#5C3C1B", // Dark shade
+                    900: "#4A2E15", // Very dark shade
+                    950: "#3A2410" // Deepest shade
                 },
+                tertiary: {
+                    50: "#E7EBF0", // Very light shade
+                    100: "#C2CCDA", // Light shade
+                    200: "#97A9C0", // Lighter shade
+                    300: "#708AA8", // Medium light shade
+                    400: "#516A8A", // Base color
+                    500: "#3D5471", // Medium shade
+                    600: "#31425A", // Medium dark shade
+                    700: "#263543", // Darker shade
+                    800: "#1D2934", // Dark shade
+                    900: "#141D25", // Very dark shade
+                    950: "#0E151B" // Deepest shade
+                },
+
                 badge: "#F1F5F9",
                 badgeText: "#475569"
             }

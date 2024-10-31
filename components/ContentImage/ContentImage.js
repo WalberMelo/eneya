@@ -6,19 +6,27 @@ import { v4 as uuid } from "uuid";
 const ContentImageData = [
     {
         id: uuid(),
-        title: "Colocación de suelos laminados y vinílicos",
+        title: "Instalación de suelos",
         content:
-            "Nos encargamos de la colocación de suelos laminados y pisos vinílicos, ideales para mejorar cualquier tipo de espacio, ya sea en viviendas, oficinas o locales comerciales. En la imagen se puede ver uno de nuestros proyectos en un salón residencial, donde se logró una apariencia elegante y moderna. Esta opción es perfecta para quienes buscan renovar sus ambientes con un acabado impecable y duradero.",
+            "Nos especializamos en la instalación y venta de suelos vinílicos, caucho, dielétricos y moquetas, perfectos para mejorar cualquier tipo de espacio: viviendas, oficinas o locales comerciales. Ofrecemos una solución ideal para quienes buscan renovar sus ambientes con acabados elegantes y duraderos.",
         align: "right",
-        image: "/servicios1.png"
+        image: "/pisos.png"
     },
     {
         id: uuid(),
-        title: "Instalación de césped artificial",
+        title: "Colocación de césped artificial",
         content:
-            "Nos especializamos en la instalación de césped artificial para diversas aplicaciones, como áreas deportivas, jardines, y espacios recreativos. La imagen muestra una de nuestras recientes instalaciones en una zona de práctica deportiva. Nuestro césped artificial no solo mejora la estética del entorno, sino que también reduce los costos de mantenimiento y asegura un rendimiento óptimo bajo cualquier condición climática.",
+            "Nos especializamos en la instalación y venta de césped artificial para diversas aplicaciones, como áreas deportivas, jardines, y espacios recreativos. Nuestro césped artificial no solo mejora la estética del entorno, sino que también reduce los costos de mantenimiento y asegura un rendimiento óptimo bajo cualquier condición climática.",
         align: "left",
         image: "/servicios2.png"
+    },
+    {
+        id: uuid(),
+        title: "Especialistas en pisos dieléctricos",
+        content:
+            "En Tenerife, somos líderes en la implementación de pisos dieléctricos, ofreciendo una solución única que garantiza seguridad y resistencia en espacios industriales y comerciales. Nuestra experiencia nos permite adaptar cada instalación a las necesidades específicas de su entorno, asegurando protección contra descargas eléctricas y durabilidad en cada proyecto.",
+        align: "right",
+        image: "/piso_dieletrico.jpg"
     }
 ];
 
@@ -52,7 +60,7 @@ export const ContentImage = () => {
                                 : "md:pl-16 lg:pl-24 xl:pl-32  mr-auto"
                         } my-auto content text-black/60`}
                     >
-                        <h3 className="mb-6 h4 md:h3 font-semibold text-black">
+                        <h3 className="mb-6 h4 md:h3 font-semibold text-black opacity-70">
                             {item.title}
                         </h3>
                         <p>{item.content}</p>

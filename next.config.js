@@ -14,7 +14,12 @@ const nextConfig = {
     },
     images: {
         formats: ["image/avif", "image/webp"],
-        domains: ["s.gravatar.com"]
+        domains: [
+            "s.gravatar.com",
+            "images.unsplash.com",
+            "demos.creative-tim.com",
+            "material-taillwind-pro-ct-tailwind-team.vercel.app"
+        ]
     },
     env: {
         siteTitle: "Your Company",

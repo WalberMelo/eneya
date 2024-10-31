@@ -1,99 +1,216 @@
-import { BadgeGroup, BadgeIcon, BadgeMessage } from "@components/Badge";
-import { Button, ButtonGroup } from "@components/Button";
-import { Content } from "@components/Content";
-import { MotionBTTContainer, MotionInfiniteImage } from "@components/Motion";
-import { SectionContainer } from "@components/Section";
-import { PageTitle } from "@components/Title";
-import { Icon } from "@iconify/react";
+// import { Button } from "@components/Button";
+// import Image from "next/image";
+
+// import { useEffect, useRef, useState } from "react";
+// import { CheckCircle } from "lucide-react";
+
+// export const HomeBanner = () => {
+//     const videoRef = useRef(null);
+//     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+//     useEffect(() => {
+//         const videoElement = videoRef.current;
+
+//         const observer = new IntersectionObserver(
+//             (entries) => {
+//                 entries.forEach((entry) => {
+//                     if (entry.isIntersecting) {
+//                         console.log("Video is in view - loading video.");
+//                         setIsVideoLoaded(true);
+//                         observer.unobserve(entry.target);
+//                     }
+//                 });
+//             },
+//             { threshold: 0.1 } // Adjusted threshold for testing
+//         );
+
+//         if (videoElement) {
+//             observer.observe(videoElement);
+//         }
+
+//         return () => {
+//             if (videoElement) observer.unobserve(videoElement);
+//         };
+//     }, []);
+
+//     return (
+//         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+//             {/* Placeholder Image */}
+//             {!isVideoLoaded && (
+//                 <Image
+//                     src="/hero_placeholder.png"
+//                     alt="Hero Video Placeholder"
+//                     layout="fill"
+//                     objectFit="cover"
+//                     className="absolute z-0 w-full h-full"
+//                     priority
+//                 />
+//             )}
+
+//             {/* Background Video */}
+//             {isVideoLoaded && (
+//                 <video
+//                     ref={videoRef}
+//                     src="/hero_video.mp4"
+//                     autoPlay
+//                     loop
+//                     muted
+//                     playsInline
+//                     className="absolute z-0 w-full h-full mt-14 object-cover"
+//                 ></video>
+//             )}
+
+//             {/* Overlay */}
+//             <div className="absolute inset-0 bg-black/30 z-10"></div>
+
+//             {/* Content */}
+//             <div className="relative z-20 text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+//                 <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
+//                     <div>
+//                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+//                             Innovamos tu hogar, diseñado para ti
+//                         </h1>
+//                         <p className="text-xl sm:text-2xl mb-8">
+//                             Un servicio personalizado para cada necesidad
+//                         </p>
+//                         <Button
+//                             size="lg"
+//                             className="bg-yellow-300 text-tertiary-800 hover:bg-tertiary-700 hover:text-secondary-300"
+//                         >
+//                             Saber más
+//                         </Button>
+//                     </div>
+
+//                     <div className="space-y-4">
+//                         {[
+//                             "Reformas",
+//                             "Mantenimiento",
+//                             "Venta e instalación",
+//                             "Proyectos personalizados"
+//                         ].map((feature, index) => (
+//                             <div
+//                                 key={index}
+//                                 className="flex items-center space-x-3"
+//                             >
+//                                 <CheckCircle className="text-secondary-200 h-6 w-6" />
+//                                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+//                                     {feature}
+//                                 </span>
+//                             </div>
+//                         ))}
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+import { Button } from "@components/Button";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { CheckCircle } from "lucide-react";
 
 export const HomeBanner = () => {
-    return (
-        <SectionContainer className="page-banner--container py-16">
-            <SectionContainer className="page-banner--inner-container wrap wrap-px z-10">
-                {/* Appear First */}
-                <MotionBTTContainer
-                    transition={{ delay: 0.2, duration: 0.5 }}
-                ></MotionBTTContainer>
-                {/* Appear Second */}
-                <MotionBTTContainer transition={{ delay: 0.4, duration: 0.5 }}>
-                    <PageTitle className="text-center mx-auto" type="heavy">
-                        Innovamos tu hogar, diseñado para ti.
-                    </PageTitle>
-                </MotionBTTContainer>
-                {/* Appear Third */}
-                <MotionBTTContainer transition={{ delay: 0.6, duration: 0.5 }}>
-                    <Content className="text-center mb-4" alignment="center">
-                        <p>Un servicio personalizado para cada necesidad. </p>
-                    </Content>
-                    {/* <div className="mt-6 mb-16 text-center">
-                        <ButtonGroup alignment="center">
-                            <Button href="#features">Servicios</Button>
-                            <a
-                                role="button"
-                                href=""
-                                className="btn btn--secondary"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Solicitar visita
-                                <Icon icon="material-symbols:arrow-forward-rounded" />
-                            </a>
-                        </ButtonGroup>
-                    </div> */}
-                </MotionBTTContainer>
-                {/* Appear Fourth -  */}
-                <MotionBTTContainer transition={{ delay: 0.8, duration: 0.5 }}>
-                    <div className="relative page-banner--image">
-                        <Content className="text-left mb-4" alignment="left">
-                            <ul className="absolute bottom-5 left-5 sm:left-10 md:left-20 lg:left-40 text-green-100 z-10 text-xs sm:text-sm md:text-base lg:text-2xl leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed tracking-tight sm:tracking-normal md:tracking-wide lg:tracking-wider">
-                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
-                                    <Icon
-                                        icon="mdi:checkbox-outline"
-                                        color="yellow"
-                                    />
-                                    <span className="ml-2">Reformas</span>
-                                </li>
-                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
-                                    <Icon
-                                        icon="mdi:checkbox-outline"
-                                        color="yellow"
-                                    />
-                                    <span className="ml-2">Mantenimiento</span>
-                                </li>
-                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
-                                    <Icon
-                                        icon="mdi:checkbox-outline"
-                                        color="yellow"
-                                    />
-                                    <span className="ml-2">
-                                        Venta e instalación
-                                    </span>
-                                </li>
-                                <li className="flex items-center mb-1 sm:mb-2 lg:mb-3">
-                                    <Icon
-                                        icon="mdi:checkbox-outline"
-                                        color="yellow"
-                                    />
-                                    <span className="ml-2">
-                                        Proyectos personalizado
-                                    </span>
-                                </li>
-                            </ul>
-                        </Content>
+    const videoRef = useRef(null);
+    const containerRef = useRef(null);
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
-                        <Image
-                            src="/hero-banner.png"
-                            width={1024}
-                            height={680}
-                            alt="Page Banner"
-                            style={{ objectFit: "cover" }}
-                            className="mx-auto w-full h-auto lg:w-full"
-                            priority
-                        />
+    useEffect(() => {
+        const containerElement = containerRef.current;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        console.log("Container is in view - loading video.");
+                        setIsVideoLoaded(true);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (containerElement) {
+            observer.observe(containerElement);
+        }
+
+        return () => {
+            if (containerElement) observer.unobserve(containerElement);
+        };
+    }, []);
+
+    return (
+        <div
+            ref={containerRef}
+            className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        >
+            {/* Placeholder Image */}
+            {!isVideoLoaded && (
+                <Image
+                    src="/hero_placeholder.png"
+                    alt="Hero Video Placeholder"
+                    layout="fill"
+                    objectFit="cover"
+                    className="absolute z-0 w-full h-full"
+                />
+            )}
+
+            {/* Background Video */}
+            {isVideoLoaded && (
+                <video
+                    ref={videoRef}
+                    // src="/hero_video.mp4"
+                    src="/hero_video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute z-0 w-full h-full object-cover"
+                ></video>
+            )}
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30 z-10"></div>
+
+            {/* Content */}
+            <div className="relative z-20 text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
+                    <div>
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                            Innovamos tu hogar, diseñado para ti
+                        </h1>
+                        <p className="text-xl sm:text-2xl mb-8">
+                            Un servicio personalizado para cada necesidad
+                        </p>
+                        <Button
+                            size="md"
+                            href="#contacto"
+                            className="bg-secondary-300 text-tertiary-800 hover:bg-amber-300 hover:text-tertiary-700 px-4 md:px-6 py-2 md:py-3 w-fit"
+                        >
+                            Saber más
+                        </Button>
                     </div>
-                </MotionBTTContainer>
-            </SectionContainer>
-        </SectionContainer>
+
+                    <div className="space-y-4">
+                        {[
+                            "Reformas",
+                            "Mantenimiento",
+                            "Venta e instalación",
+                            "Proyectos personalizados"
+                        ].map((feature, index) => (
+                            <div
+                                key={index}
+                                className="flex items-center space-x-3"
+                            >
+                                <CheckCircle className="text-secondary-200 h-6 w-6" />
+                                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                                    {feature}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };

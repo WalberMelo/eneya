@@ -99,7 +99,7 @@ export const Form = () => {
                     </p>
                     <button
                         type="submit"
-                        className="mt-4 w-full py-2 text-slate-800 bg-amber-200	 rounded-lg hover:bg-yellow-500	 transition"
+                        className="mt-4 w-full py-2 text-slate-800 bg-secondary-100	 rounded-lg hover:bg-secondary-300 transition"
                     >
                         Enviar
                     </button>

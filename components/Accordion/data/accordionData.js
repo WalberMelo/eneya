@@ -7,7 +7,7 @@ const accordionHomeData = [
         title: " ¿Cuánto tiempo tarda una instalación de césped artificial?",
         isOpen: true,
         content:
-            "El tiempo de instalación depende del tamaño del área, pero generalmente una instalación típica de césped artificial puede completarse en 2 a 3 días. Nos aseguramos de que el proceso sea lo más rápido y eficiente posible, sin comprometer la calidad."
+            "El tiempo de instalación depende del tamaño del área, pero generalmente una instalación típica de césped artificial puede completarse en 1 a 2 días. Nos aseguramos de que el proceso sea lo más rápido y eficiente posible, sin comprometer la calidad."
     },
     {
         id: uuid(),
@@ -41,14 +41,14 @@ const accordionPrivacidadData = [
         content: [
             {
                 type: "item",
-                label: "Nuestra empresa: Eneya Instalaciones, con CIF: B63636363"
+                label: "Nuestra empresa: Eneya Instalaciones, con NIF: 78693627R"
             },
             {
                 type: "item",
                 label: "Dirección: Avda/ Antigua Peseta Nº 131 – P.I. Atalayas, 03114, Santa Cruz de Tenerife"
             },
             { type: "item", label: "Teléfono: 64646464" },
-            { type: "item", label: "Email: eneya@eneya.com" },
+            { type: "item", label: "Email: contacto@eneya.com" },
             { type: "item", label: "Página web: realturf.com" }
         ]
     },

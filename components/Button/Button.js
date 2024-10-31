@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const ButtonVariant = {
     primary: "btn--primary",
-    secondary: "btn--secondary",
+    secondary: "btn--tertiary",
     outline: "btn--outline",
     black: "btn--black"
 };

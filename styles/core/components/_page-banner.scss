@@ -55,7 +55,7 @@
     .page-banner {
         &--image {
             ul {
-                @apply absolute text-green-100 z-10;
+                @apply absolute z-10;
 
                 @media (min-width: 640px) {
                     left: 10px; // For small screens

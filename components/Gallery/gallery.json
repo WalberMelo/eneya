@@ -1,0 +1,49 @@
+{
+    "galleryImages": [
+        {
+            "title": "Pladur",
+            "src": "/1.Pladur.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Eletricidad",
+            "src": "/2.Eletricidad.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Albañileria",
+            "src": "/3.Albañileria.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Fonteneria",
+            "src": "/4.Fonteneria.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Tarima exterior",
+            "src": "/5.Tarima.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Piso vinilicos",
+            "src": "/6.Piso_vinilicos.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Moqueta",
+            "src": "/7.Moqueta.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Cesped artificial",
+            "src": "/8.Cesped_artificial.jpg",
+            "alt": "gallery-photo"
+        },
+        {
+            "title": "Caucho",
+            "src": "/9.Caucho.jpg",
+            "alt": "gallery-photo"
+        }
+    ]
+}

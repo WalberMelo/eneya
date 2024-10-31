@@ -5,26 +5,27 @@ import { Nav } from "@components/Nav";
 import { ButtonGroup, Button } from "@components/Button";
 import { Icon } from "@iconify/react";
 
+// Header Component
 export const Header = () => {
     return (
         <header
             id="header"
             className="header fixed left-0 w-full z-30 top-0 bg-white backdrop-filter backdrop-blur-md bg-opacity-50"
         >
-            <SectionContainer className="header--container wrap wrap-px ">
-                <div className="header-logo--container">
-                    <h1 className="logo mb-0">
-                        <Link href="/">
+            <SectionContainer className="header--container wrap">
+                <div className="header-logo--container flex-shrink-0">
+                    <Link href="/">
+                        <div className="pl-4 w-24 sm:w-32 md:w-36 lg:w-40 xl:w-44">
                             <Image
-                                src="/eneya.png"
+                                src="/eneya_logo.png"
                                 alt="logo"
-                                className="h-20 w-auto"
-                                height="200"
-                                width="700"
+                                layout="responsive"
+                                width={140}
+                                height={40}
                                 priority
                             />
-                        </Link>
-                    </h1>
+                        </div>
+                    </Link>
                 </div>
                 <SectionContainer className="flex items-center ml-auto">
                     <Nav />
@@ -32,7 +33,7 @@ export const Header = () => {
                         <a
                             role="button"
                             href="#contacto"
-                            className="btn btn--secondary ml-4"
+                            className="btn btn--tertiary ml-4"
                         >
                             Solicitar Presupuesto
                             <Icon icon="material-symbols:arrow-forward-rounded" />

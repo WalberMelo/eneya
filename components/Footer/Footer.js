@@ -49,37 +49,57 @@ export const Footer = () => {
     const year = date.getFullYear();
 
     return (
-        <footer id="footer" className="bg-white">
+        <footer id="footer" className="bg-tertiary-700">
             {/* Footer Links */}
             <SectionContainer className="footer--container wrap wrap-px relative z-10">
-                <div className="footer--content-container py-16">
-                    <div className="footer-links mb-12 grid grid-cols-2 gap-8 md:mb-16 md:grid-cols-8 lg:grid-cols-12">
+                <div className="footer--content-container py-6">
+                    <div className="footer-links mb-12 grid grid-cols-2 gap-8 md:mb-6 md:grid-cols-8 lg:grid-cols-12">
                         <div className="col-span-6">
-                            <div className="footer--logo grid gap-8">
+                            <div className="footer--logo grid place-items-center text-center gap-4 ">
                                 <Link href="/">
                                     <Image
-                                        src="/eneya.png"
+                                        src="/eneya_logo_footer.png"
                                         alt="logo"
-                                        className="h-20 w-auto"
-                                        height="200"
-                                        width="700"
+                                        width={100}
+                                        height={40}
                                         priority
                                     />
                                 </Link>
+                                <SectionContainer className="footer-credits relative z-10">
+                                    <div className="wrap wrap-px">
+                                        <p className="my-0 text-secondary-300">
+                                            © {year} Eneya. Todos derechos
+                                            reservados{" - "}
+                                            <span className="font-normal">
+                                                Desarrollado por{" "}
+                                                <Link
+                                                    className="transition-colors duration-300 underline"
+                                                    href="https://www.walbermelo.com/"
+                                                    target="_blank"
+                                                >
+                                                    Walber Melo
+                                                </Link>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </SectionContainer>
                                 {/* Get Template button; remove if not used */}
-                                <ButtonGroup alignment="left">
+                                {/* <ButtonGroup
+                                    alignment="left"
+                                    className="mx-auto"
+                                >
                                     <a
                                         role="button"
                                         href=""
-                                        className="btn btn--secondary"
+                                        className="btn btn--secondary text-tertiary-700"
                                     >
                                         Solicitar presupuesto
                                         <Icon icon="material-symbols:arrow-forward-rounded" />
                                     </a>
-                                </ButtonGroup>
+                                </ButtonGroup> */}
                             </div>
                         </div>
-                        <div className="col-span-6">
+                        <div className="col-span-6 text-secondary-300">
                             <div className="footer-menu grid grid-cols-2 md:grid-cols-8 lg:grid-cols-12">
                                 {DATA.map((footerLinks) => (
                                     <div
@@ -119,9 +139,9 @@ export const Footer = () => {
                 </div>
             </SectionContainer>
             {/* Footer Credits */}
-            <SectionContainer className="footer-credits relative z-10">
+            {/* <SectionContainer className="footer-credits relative z-10">
                 <div className="wrap wrap-px py-6">
-                    <p className="my-0">
+                    <p className="my-0 text-secondary-300">
                         © {year} Eneya. Todos derechos reservados{" - "}
                         <span className="font-normal">
                             Desarrollado por{" "}
@@ -135,7 +155,7 @@ export const Footer = () => {
                         </span>
                     </p>
                 </div>
-            </SectionContainer>
+            </SectionContainer> */}
             <div className="footer--background"></div>
         </footer>
     );
