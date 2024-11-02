@@ -27,8 +27,8 @@ const DATA = [
         items: [
             {
                 label: "Quiénes somos",
-                href: "",
-                target: "_blank"
+                href: ""
+                // target: "_blank"
             },
             {
                 label: "Instagram",
@@ -36,8 +36,8 @@ const DATA = [
                 target: "_blank"
             },
             {
-                label: "Facebook",
-                href: "",
+                label: "WhatsApp",
+                href: "https://api.whatsapp.com/send?phone=34634889995",
                 target: "_blank"
             }
         ]
@@ -118,6 +118,7 @@ export const Footer = () => {
                                                     >
                                                         <a
                                                             className="mb-2 block w-auto font-medium transition-colors duration-300 hover:underline"
+                                                            rel="noopener noreferrer"
                                                             href={
                                                                 footerItem.href
                                                             }
@@ -138,24 +139,6 @@ export const Footer = () => {
                     </div>
                 </div>
             </SectionContainer>
-            {/* Footer Credits */}
-            {/* <SectionContainer className="footer-credits relative z-10">
-                <div className="wrap wrap-px py-6">
-                    <p className="my-0 text-secondary-300">
-                        © {year} Eneya. Todos derechos reservados{" - "}
-                        <span className="font-normal">
-                            Desarrollado por{" "}
-                            <Link
-                                className="transition-colors duration-300 hover:underline"
-                                href="https://www.walbermelo.com/"
-                                target="_blank"
-                            >
-                                W|M
-                            </Link>
-                        </span>
-                    </p>
-                </div>
-            </SectionContainer> */}
             <div className="footer--background"></div>
         </footer>
     );

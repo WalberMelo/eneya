@@ -21,18 +21,27 @@ import {
 } from "@components/Card";
 import { SavingsCalculator } from "@components/Features/SavingsCalculator";
 import { Gallery } from "@components/Gallery";
+import CardList from "@components/Card/CardList";
+import Image from "next/image";
 
 export default function Home() {
     return (
         <Layout className="">
             <SEO
                 title="Eneya - Instalaciones y Reformas"
-                description="Eneya Instalaciones ofrece soluciones integrales en césped artificial, pisos vinílicos y reformas. Con más de 20 años de experiencia, destacamos por proyectos personalizados y cumplimiento en los plazos de entrega."
-                keywords="instalaciones, césped artificial, reformas, pisos vinílicos, albañilería, electricidad, fontanería, instalación de moquetas, pladur, mantenimiento"
+                description="Eneya Instalaciones ofrece soluciones integrales en instalación y venta de suelos vinílicos, caucho, dielétricos, moquetas, tarima exterior y reformas. Con más de 20 años de experiencia destacase por proyectos personalizados y cumplimiento en los plazos de entrega."
+                keywords="instalaciones, césped artificial, reformas, pisos vinílicos, pisos caucho, pisos dielétricos, albañilería, electricidad, fontanería, instalación de moquetas, pladur, mantenimiento, proyectos personalizados, Diseños en 3D, Gestión de obra, Licencias de obra, Tarima exterior"
             />
             <div className="main-wrapper bg-[#F3F5F8] relative z-10 pb-20 pt-20 ">
-                {/* { Page Banner } */}
-                <HomeBanner />
+                {/* { Hero } */}
+                <MotionBTTContainer transition={{ delay: 0.2, duration: 0.5 }}>
+                    <SectionContainer
+                        id="features"
+                        className="features sm:mt-0 md:mt-10 lg:mt-12"
+                    >
+                        <HomeBanner />
+                    </SectionContainer>
+                </MotionBTTContainer>
                 {/* Components Container */}
                 <SectionContainer className="components--container wrap wrap-px grid gap-8 sm:gap-24">
                     {/* Features */}
@@ -63,7 +72,7 @@ export default function Home() {
                         </SectionContainer>
                     </MotionBTTContainer>
 
-                    {/* Card Container Tabs */}
+                    {/* Proyectos */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
@@ -94,9 +103,8 @@ export default function Home() {
                                 </p>
                             </Content>
                             <div
+                                className="w-full md:w-3/4 lg:w-3/4"
                                 style={{
-                                    width: "60%",
-                                    height: "100%",
                                     overflow: "hidden",
                                     position: "relative",
                                     margin: "0 auto"
@@ -111,16 +119,27 @@ export default function Home() {
                                 />
                             </div>
                         </SectionContainer>
+                    </MotionBTTContainer>
 
-                        {/* <Content
-                                className="text-center mt-8 text-black-400"
-                                alignment="center"
+                    <MotionBTTContainer
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                    >
+                        <SectionContainer>
+                            <PageTitle
+                                className="text-center mx-auto mb-12"
+                                type="default"
                             >
-                                <h3 className="mb-6 md:h3 font-semibold text-black">
-                                    Servicios de montaje y mantenimiento
-                                </h3>
-                            </Content> */}
-                        <SectionContainer className="feature-tabs py-16">
+                                Proyectos personalizados
+                            </PageTitle>
+                            <CardList />
+                        </SectionContainer>
+                    </MotionBTTContainer>
+
+                    {/* Servicios */}
+                    <MotionBTTContainer
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                    >
+                        <SectionContainer className="feature-tabs">
                             <BadgeGroup alignment="center">
                                 <BadgeMessage>Servicios</BadgeMessage>
                                 <BadgeIcon icon="fluent-mdl2:work-item" />
@@ -132,31 +151,6 @@ export default function Home() {
                                 Atendemos tus requerimientos con la mayor
                                 dedicación
                             </PageTitle>
-
-                            {/* <CardGroup className="grid scroll-m-24 gap-8 grid-cols-1 max-w-4xl mx-auto mt-18 md:grid-cols-2">
-                                <Card className="col-span-1 text-primary-900">
-                                    <CardBody className="w-full bg-white-600/20 p-12">
-                                        <CardImage
-                                            src="/servicios3.png"
-                                            alt="Customizable Layouts image used."
-                                        />
-                                        <CardHeader className="!text-black !text-2xl !font-bold">
-                                            Montaje de Pladur
-                                        </CardHeader>
-                                    </CardBody>
-                                </Card>
-                                <Card className="col-span-1 text-primary-900">
-                                    <CardBody className="w-full bg-white-600/20 p-12">
-                                        <CardImage
-                                            src="/servicios5.png"
-                                            alt="Progress Tracking image used."
-                                        />
-                                        <CardHeader className="!text-black !text-2xl !font-bold">
-                                            Electricidad y Fontanería
-                                        </CardHeader>
-                                    </CardBody>
-                                </Card>
-                            </CardGroup> */}
 
                             <Gallery />
                         </SectionContainer>
@@ -209,8 +203,8 @@ export default function Home() {
                             <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto ">
                                 {/* First Card */}
                                 <Card className="col-span-1 text-primary-900">
-                                    <CardBody className="w-full bg-white-600/20 p-1">
-                                        <CardHeader className="!text-black/70 !text-2xl !font-bold">
+                                    <CardBody className="w-full lg:w-4/6 bg-white-600/20 py-4 px-2">
+                                        <CardHeader className=" !text-2xl !font-bold">
                                             Solicita Presupuesto
                                         </CardHeader>
                                         <Form />
@@ -221,6 +215,25 @@ export default function Home() {
                                 <Card className="col-span-1 text-primary-900">
                                     <CardBody className="w-full p-8">
                                         <SavingsCalculator />
+                                    </CardBody>
+                                    <CardBody className="w-full p-8">
+                                        <Content>
+                                            <CardHeader>
+                                                Nuestra red de expertos
+                                            </CardHeader>
+                                            <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto ">
+                                                <div className="pl-4 mt-8 w-20 sm:w-28 md:w-34 lg:w-36 xl:w-40">
+                                                    <Image
+                                                        src="/logo_MV.png"
+                                                        alt="logo"
+                                                        layout="responsive"
+                                                        width={140}
+                                                        height={40}
+                                                        priority
+                                                    />
+                                                </div>
+                                            </CardGroup>
+                                        </Content>
                                     </CardBody>
                                 </Card>
                             </CardGroup>

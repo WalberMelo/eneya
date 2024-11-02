@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const CardType = {
     default: "",
-    bordered: "border-[1px] border-neutral-200 text-primary-500 p-8"
+    bordered: "border-[1px] border-neutral-200 text-primary-500 p-4"
 };
 
 export const Card = ({

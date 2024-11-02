@@ -63,7 +63,7 @@ export const ContentImage = () => {
                         <h3 className="mb-6 h4 md:h3 font-semibold text-black opacity-70">
                             {item.title}
                         </h3>
-                        <p>{item.content}</p>
+                        <p className="text-lg">{item.content}</p>
                         <ul className="process-item--list space-y-3">
                             {item.listItems?.length &&
                                 item.listItems.map((listItem) => (

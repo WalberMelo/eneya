@@ -47,9 +47,9 @@ const accordionPrivacidadData = [
                 type: "item",
                 label: "Dirección: Avda/ Antigua Peseta Nº 131 – P.I. Atalayas, 03114, Santa Cruz de Tenerife"
             },
-            { type: "item", label: "Teléfono: 64646464" },
+            { type: "item", label: "Teléfono: +34634889995" },
             { type: "item", label: "Email: contacto@eneya.com" },
-            { type: "item", label: "Página web: realturf.com" }
+            { type: "item", label: "Página web: eneya.es" }
         ]
     },
     {

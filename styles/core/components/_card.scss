@@ -12,15 +12,15 @@
     }
 
     .card--container {
-        @apply flex h-full flex-wrap;
+        @apply flex h-full flex-wrap content-start;
     }
 
     .card-group--container {
-        @apply grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3;
+        @apply grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4;
     }
 
     .card--header {
-        @apply mt-8 mb-2 flex w-full items-center justify-center;
+        @apply mt-2 mb-2 flex w-full items-center justify-center;
 
         h2 {
             @apply mb-0 text-xl;

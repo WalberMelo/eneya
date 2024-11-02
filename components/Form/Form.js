@@ -22,7 +22,7 @@ export const Form = () => {
         formData.append("message", projectDetails);
 
         try {
-            const response = await fetch("https://formspree.io/f/mnqynzya", {
+            const response = await fetch("https://formspree.io/f/mdkoelnd", {
                 method: "POST",
                 body: formData,
                 headers: {
@@ -104,7 +104,7 @@ export const Form = () => {
                         Enviar
                     </button>
                     {isSent && (
-                        <p className="mt-2 text-green-500">
+                        <p className="mt-2 text-secondary-400">
                             Gracias por tu mensaje! Entraremos en contacto
                             contigo a la brevedad
                         </p>

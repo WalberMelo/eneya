@@ -33,7 +33,7 @@ export const Header = () => {
                         <a
                             role="button"
                             href="#contacto"
-                            className="btn btn--tertiary ml-4"
+                            className="btn btn--tertiary ml-8"
                         >
                             Solicitar Presupuesto
                             <Icon icon="material-symbols:arrow-forward-rounded" />
