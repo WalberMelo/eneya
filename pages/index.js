@@ -23,6 +23,7 @@ import { SavingsCalculator } from "@components/Features/SavingsCalculator";
 import { Gallery } from "@components/Gallery";
 import CardList from "@components/Card/CardList";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -221,16 +222,41 @@ export default function Home() {
                                             <CardHeader>
                                                 Nuestra red de expertos
                                             </CardHeader>
-                                            <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto ">
-                                                <div className="pl-4 mt-8 w-20 sm:w-28 md:w-34 lg:w-36 xl:w-40">
-                                                    <Image
-                                                        src="/logo_MV.png"
-                                                        alt="logo"
-                                                        layout="responsive"
-                                                        width={140}
-                                                        height={40}
-                                                        priority
-                                                    />
+                                            {/* <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto ">
+                                                <div className="pl-4 mt-8 w-24 sm:w-30 md:w-36 lg:w-40 xl:w-40">
+                                                    <Link
+                                                        href="https://www.mvsantolalla.com/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        <Image
+                                                            src="/logo_col_mv.png"
+                                                            alt="logo"
+                                                            width={180}
+                                                            height={80}
+                                                            priority
+                                                        />
+                                                    </Link>
+                                                </div>
+                                            </CardGroup> */}
+                                            <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto">
+                                                <div className="pl-4 mt-8 w-24 sm:w-40 md:w-48 lg:w-60 xl:w-72 relative h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56">
+                                                    <Link
+                                                        href="https://www.mvsantolalla.com/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        <Image
+                                                            src="/logo_col_mv.png"
+                                                            alt="logo"
+                                                            fill={true}
+                                                            priority
+                                                            style={{
+                                                                objectFit:
+                                                                    "contain"
+                                                            }}
+                                                        />
+                                                    </Link>
                                                 </div>
                                             </CardGroup>
                                         </Content>
