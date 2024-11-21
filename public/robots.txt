@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /politica-de-privacidad
+Disallow: /404
+Allow: /
+
+# Bloquear cualquier URL que contenga 404
+Disallow: /*404*
+
+Sitemap: https://www.tusitio.com/sitemap.xml

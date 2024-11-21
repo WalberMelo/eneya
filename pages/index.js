@@ -9,6 +9,7 @@ import { Content } from "@components/Content";
 import { Accordion, accordionHomeData } from "@components/Accordion";
 import { MotionBTTContainer } from "@components/Motion";
 import { Form } from "@components/Form";
+import Head from "next/head";
 import SEO from "@components/SEO/SEO";
 import ReactCompareImage from "react-compare-image";
 
@@ -26,12 +27,44 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "Eneya Instalaciones",
+        url: "https://www.eneya.es/",
+        telephone: "+34-634-889-995 ",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "Tenerife",
+            addressRegion: "Islas Canarias",
+            addressCountry: "ES"
+        },
+        description:
+            "Más de 20 años de experiencia en reformas personalizadas y mantenimiento en Tenerife.",
+        priceRange: "$$",
+        "areaServed": "Tenerife",
+        "description": "Especialistas en reformas y servicios de instalación en toda Tenerife. Garantizamos calidad y satisfacción en cada proyecto.",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "25"
+        },
+    };
+
     return (
         <Layout className="">
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(schemaData)
+                    }}
+                />
+            </Head>
             <SEO
-                title="Eneya - Instalaciones y Reformas"
-                description="Eneya Instalaciones ofrece soluciones integrales en instalación y venta de suelos vinílicos, caucho, dielétricos, moquetas, tarima exterior y reformas. Con más de 20 años de experiencia destacase por proyectos personalizados y cumplimiento en los plazos de entrega."
-                keywords="instalaciones, césped artificial, reformas, pisos vinílicos, pisos caucho, pisos dielétricos, albañilería, electricidad, fontanería, instalación de moquetas, pladur, mantenimiento, proyectos personalizados, Diseños en 3D, Gestión de obra, Licencias de obra, Tarima exterior"
+                title="Instalaciones y Reformas Tenerife: Soluciones a Medida"
+                description="más de 20 años de experiencia en suelos vinílicos, caucho, moquetas y reformas. Proyectos personalizados y entrega puntual garantizada."
+                keywords="instalaciones electricas​, instalaciones de fontanería​, cesped artificial, reformas tenerife, pisos vinilicos, pisos caucho, pisos dielétricos, albañiles tenerife​, instalación de moquetas, pladur tenerife, licencia de obra menor​, Tarima exterior"
             />
             <div className="main-wrapper bg-[#F3F5F8] relative z-10 pb-20 pt-20 ">
                 {/* { Hero } */}
@@ -45,14 +78,22 @@ export default function Home() {
                 </MotionBTTContainer>
                 {/* Components Container */}
                 <SectionContainer className="components--container wrap wrap-px grid gap-8 sm:gap-24">
-                    {/* Features */}
+                    {/* Testimonials */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
                         <SectionContainer
-                            id="features"
-                            className="features mt-12"
+                            id="testimonials"
+                            className="benefits"
                         >
+                            <Columns />
+                        </SectionContainer>
+                    </MotionBTTContainer>
+                    {/* Features */}
+                    <MotionBTTContainer
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                    >
+                        <SectionContainer id="features" className="features">
                             <PageTitle
                                 className="text-center mx-auto"
                                 type="default"
@@ -156,27 +197,6 @@ export default function Home() {
                             <Gallery />
                         </SectionContainer>
                     </MotionBTTContainer>
-
-                    {/* Testimonials */}
-                    <MotionBTTContainer
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                    >
-                        <SectionContainer
-                            id="testimonials"
-                            className="benefits"
-                        >
-                            <BadgeGroup alignment="left">
-                                <BadgeMessage>Testimonios</BadgeMessage>
-                                <BadgeIcon icon="twemoji:waving-hand" />
-                            </BadgeGroup>
-                            <PageTitle className="" type="default">
-                                Esto es lo que nuestros clientes tienen que
-                                decir sobre nuestros servicios
-                            </PageTitle>
-                            <Columns />
-                        </SectionContainer>
-                    </MotionBTTContainer>
-
                     {/* FAQ */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
