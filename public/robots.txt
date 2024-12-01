@@ -6,4 +6,4 @@ Allow: /
 # Bloquear cualquier URL que contenga 404
 Disallow: /*404*
 
-Sitemap: https://www.tusitio.com/sitemap.xml
+Sitemap: https://www.eneya.es/sitemap.xml

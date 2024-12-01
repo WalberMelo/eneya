@@ -9,6 +9,31 @@ const SEO = ({ title, description, keywords }) => {
         process.env.siteImagePreviewUrl || "ruta/imagen/preview.png"
     }`;
 
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "Eneya Instalaciones",
+        url: "https://www.eneya.es/",
+        telephone: "+34-634-889-995 ",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "Tenerife",
+            addressRegion: "Islas Canarias",
+            addressCountry: "ES"
+        },
+        description:
+            "Más de 20 años de experiencia en reformas personalizadas y mantenimiento en Tenerife.",
+        priceRange: "$$",
+        areaServed: "Tenerife",
+        description:
+            "Especialistas en reformas y servicios de instalación en toda Tenerife. Garantizamos calidad y satisfacción en cada proyecto.",
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5",
+            reviewCount: "25"
+        }
+    };
+
     return (
         <Head>
             <meta charSet="utf-8" />
@@ -58,6 +83,13 @@ const SEO = ({ title, description, keywords }) => {
 
             {/* Title */}
             <title>{title}</title>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(schemaData)
+                }}
+            />
         </Head>
     );
 };

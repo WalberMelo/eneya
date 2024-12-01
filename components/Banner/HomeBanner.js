@@ -176,13 +176,11 @@ export const HomeBanner = () => {
             <div className="relative z-20 text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
                     <div>
-                        <h1 className="
-                        text-[48px] md:text-[60px] lg:text-[80px] font-bold leading-tight mb-6
-                        ">
-                        Transformamos tu espacio en el hogar que siempre quisiste
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                            Innovamos tu hogar, diseñado para ti
                         </h1>
-                        <p className="text-xl mb-8">
-                        Soluciones únicas, diseñadas para cumplir tus sueños y necesidades.
+                        <p className="text-xl sm:text-2xl mb-8">
+                            Un servicio personalizado para cada necesidad
                         </p>
                         <Button
                             size="md"
@@ -205,9 +203,7 @@ export const HomeBanner = () => {
                                 className="flex items-center space-x-3"
                             >
                                 <CheckCircle className="text-secondary-200 h-6 w-6" />
-                                <span className="text-xl">
-                                    {feature}
-                                </span>
+                                <span className="text-xl">{feature}</span>
                             </div>
                         ))}
                     </div>

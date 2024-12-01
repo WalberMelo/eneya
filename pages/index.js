@@ -9,7 +9,6 @@ import { Content } from "@components/Content";
 import { Accordion, accordionHomeData } from "@components/Accordion";
 import { MotionBTTContainer } from "@components/Motion";
 import { Form } from "@components/Form";
-import Head from "next/head";
 import SEO from "@components/SEO/SEO";
 import ReactCompareImage from "react-compare-image";
 
@@ -27,40 +26,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        name: "Eneya Instalaciones",
-        url: "https://www.eneya.es/",
-        telephone: "+34-634-889-995 ",
-        address: {
-            "@type": "PostalAddress",
-            addressLocality: "Tenerife",
-            addressRegion: "Islas Canarias",
-            addressCountry: "ES"
-        },
-        description:
-            "Más de 20 años de experiencia en reformas personalizadas y mantenimiento en Tenerife.",
-        priceRange: "$$",
-        "areaServed": "Tenerife",
-        "description": "Especialistas en reformas y servicios de instalación en toda Tenerife. Garantizamos calidad y satisfacción en cada proyecto.",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "25"
-        },
-    };
-
     return (
         <Layout className="">
-            <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(schemaData)
-                    }}
-                />
-            </Head>
             <SEO
                 title="Instalaciones y Reformas Tenerife: Soluciones a Medida"
                 description="más de 20 años de experiencia en suelos vinílicos, caucho, moquetas y reformas. Proyectos personalizados y entrega puntual garantizada."
@@ -78,17 +45,6 @@ export default function Home() {
                 </MotionBTTContainer>
                 {/* Components Container */}
                 <SectionContainer className="components--container wrap wrap-px grid gap-8 sm:gap-24">
-                    {/* Testimonials */}
-                    <MotionBTTContainer
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                    >
-                        <SectionContainer
-                            id="testimonials"
-                            className="benefits"
-                        >
-                            <Columns />
-                        </SectionContainer>
-                    </MotionBTTContainer>
                     {/* Features */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
@@ -197,6 +153,19 @@ export default function Home() {
                             <Gallery />
                         </SectionContainer>
                     </MotionBTTContainer>
+
+                    {/* Testimonials */}
+                    <MotionBTTContainer
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                    >
+                        <SectionContainer
+                            id="testimonials"
+                            className="benefits"
+                        >
+                            <Columns />
+                        </SectionContainer>
+                    </MotionBTTContainer>
+
                     {/* FAQ */}
                     <MotionBTTContainer
                         transition={{ delay: 0.2, duration: 0.5 }}
