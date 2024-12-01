@@ -38,7 +38,7 @@ export default function Home() {
                 <MotionBTTContainer transition={{ delay: 0.2, duration: 0.5 }}>
                     <SectionContainer
                         id="features"
-                        className="features sm:mt-0 md:mt-10 lg:mt-12"
+                        className="features sm:mt-0 md:mt-10 lg:mt-12 mb-12"
                     >
                         <HomeBanner />
                     </SectionContainer>
@@ -211,42 +211,43 @@ export default function Home() {
                                             <CardHeader>
                                                 Nuestra red de expertos
                                             </CardHeader>
-                                            {/* <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto ">
-                                                <div className="pl-4 mt-8 w-24 sm:w-30 md:w-36 lg:w-40 xl:w-40">
-                                                    <Link
-                                                        href="https://www.mvsantolalla.com/"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
+                                            <CardGroup className="grid items-center justify-items-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-3 ">
+                                                {[
+                                                    {
+                                                        href: "https://www.mvsantolalla.com/",
+                                                        src: "/logo_col_mv.png",
+                                                        alt: "MV Santolalla logo"
+                                                    },
+                                                    {
+                                                        href: "https://www.mimejorcasa.com/",
+                                                        src: "/logo_col_mimejor.jpeg",
+                                                        alt: "Mi Mejor Casa logo"
+                                                    },
+                                                    {
+                                                        href: "https://redisa.es/",
+                                                        src: "/logo_col_redisa.jpeg",
+                                                        alt: "Redisa logo"
+                                                    }
+                                                ].map((item, index) => (
+                                                    <div
+                                                        key={index}
+                                                        className="relative"
                                                     >
-                                                        <Image
-                                                            src="/logo_col_mv.png"
-                                                            alt="logo"
-                                                            width={180}
-                                                            height={80}
-                                                            priority
-                                                        />
-                                                    </Link>
-                                                </div>
-                                            </CardGroup> */}
-                                            <CardGroup className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto">
-                                                <div className="pl-4 mt-8 w-24 sm:w-40 md:w-48 lg:w-60 xl:w-72 relative h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56">
-                                                    <Link
-                                                        href="https://www.mvsantolalla.com/"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <Image
-                                                            src="/logo_col_mv.png"
-                                                            alt="logo"
-                                                            fill={true}
-                                                            priority
-                                                            style={{
-                                                                objectFit:
-                                                                    "contain"
-                                                            }}
-                                                        />
-                                                    </Link>
-                                                </div>
+                                                        <Link
+                                                            href={item.href}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            <Image
+                                                                src={item.src}
+                                                                alt={item.alt}
+                                                                objectFit="contain"
+                                                                width={100}
+                                                                height={100}
+                                                            />
+                                                        </Link>
+                                                    </div>
+                                                ))}
                                             </CardGroup>
                                         </Content>
                                     </CardBody>
